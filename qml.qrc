@@ -13,5 +13,6 @@
         <file>qml/ViewDelegateModule/Header.qml</file>
         <file>qml/ViewDelegateModule/img/icon_header.svg</file>
         <file>qml/ViewDelegateModule/font/EuphoriaScript-Regular.ttf</file>
+        <file>qml/ViewDelegateModule/font/Mukta-Bold.ttf</file>
     </qresource>
 </RCC>
