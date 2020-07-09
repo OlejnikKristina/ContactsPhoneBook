@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/StyleModule/qmldir</file>
+        <file>qml/StyleModule/Style.qml</file>
+        <file>qml/ViewDelegateModule/ListDelegate.qml</file>
+        <file>qml/ViewDelegateModule/ListView.qml</file>
+        <file>qml/ViewDelegateModule/qmldir</file>
+        <file>main.qml</file>
+        <file>qml/ViewDelegateModule/FontStyle.qml</file>
+        <file>qml/ViewDelegateModule/img/black_contacts.svg</file>
+        <file>qml/ViewDelegateModule/img/white_contact.svg</file>
+        <file>qml/ViewDelegateModule/ContactImg.qml</file>
+        <file>qml/ViewDelegateModule/Header.qml</file>
+        <file>qml/ViewDelegateModule/img/icon_header.svg</file>
+        <file>qml/ViewDelegateModule/font/EuphoriaScript-Regular.ttf</file>
+    </qresource>
+</RCC>

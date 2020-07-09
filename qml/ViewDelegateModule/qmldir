@@ -1,0 +1,4 @@
+module ViewDelegateModule
+ListView 1.0 ListView.qml
+ListDelegate 1.0 ListDelegate.qml
+FontStyle 1.0 FontStyle.qml
