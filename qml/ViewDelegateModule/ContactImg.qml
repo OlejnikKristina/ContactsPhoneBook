@@ -5,7 +5,6 @@ Rectangle {
 	property int contactImgSize: Style.contactImgSize
 	property int contactImgBoxSize: Style.contactImgBoxSize
 
-	anchors.verticalCenter: _contactDelegate.verticalCenter
 	width: contactImgBoxSize
 	height:contactImgBoxSize
 	color: _delegateArea.pressed ?

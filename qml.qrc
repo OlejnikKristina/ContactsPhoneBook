@@ -14,5 +14,6 @@
         <file>qml/ViewDelegateModule/img/icon_header.svg</file>
         <file>qml/ViewDelegateModule/font/EuphoriaScript-Regular.ttf</file>
         <file>qml/ViewDelegateModule/font/Mukta-Bold.ttf</file>
+        <file>qml/ViewDelegateModule/GridDelegate.qml</file>
     </qresource>
 </RCC>

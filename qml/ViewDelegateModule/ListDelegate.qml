@@ -9,7 +9,9 @@ Rectangle {
 	width: root.width
 	height: 70
 
-	ContactImg {}
+	ContactImg {
+		anchors.verticalCenter: _contactDelegate.verticalCenter
+	}
 
 	Column {
 		anchors.fill: _contactDelegate

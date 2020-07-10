@@ -7,6 +7,7 @@ QtObject {
 	readonly property int winHeight: 640
 
 	property bool isDarkTheme: true
+	property bool isGrid: true
 	readonly property color mainColor: isDarkTheme ? "#3a1c17" : "#6200EE"
 	readonly property color mainVariantColor: "#3700B3"
 	readonly property color secondaryColor: "#03DAC6"
@@ -18,8 +19,8 @@ QtObject {
 	readonly property color errorColor: isDarkTheme ? "#CF6679" : "#B00020"
 	readonly property color textColor: isDarkTheme ? "#FFFFFF" : "#FF5722"
 
-	readonly property int contactImgSize: 30
-	readonly property int contactImgBoxSize: contactImgSize * 2
+	readonly property int contactImgSize: isGrid ? 60 : 30
+	readonly property int contactImgBoxSize: isGrid ? 20 : contactImgSize * 2
 
 	readonly property real defaultOpacity: 1
 	readonly property real regularOpacity: 0.87
