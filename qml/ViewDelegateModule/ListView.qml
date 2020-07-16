@@ -1,4 +1,5 @@
 import QtQuick 2.5
+import QtQml.Models 2.15
 import StyleModule 1.0
 import PhoneContactsModel 1.0
 
@@ -30,7 +31,9 @@ GridView {
 		width: Style.winWidth
 	}
 
-	model: ContactsModel {}
+	model: ContactsModel {
+		id: myContactModel
+	}
 
 	delegate: GridDelegate {}
 }

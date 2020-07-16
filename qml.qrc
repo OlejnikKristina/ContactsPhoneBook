@@ -15,5 +15,11 @@
         <file>qml/ViewDelegateModule/font/EuphoriaScript-Regular.ttf</file>
         <file>qml/ViewDelegateModule/font/Mukta-Bold.ttf</file>
         <file>qml/ViewDelegateModule/GridDelegate.qml</file>
+        <file>qml/ViewDelegateModule/ViewButton.qml</file>
+        <file>qml/ViewDelegateModule/img/grid.png</file>
+        <file>qml/ViewDelegateModule/img/list.png</file>
+        <file>qml/ViewDelegateModule/FavoriteButton.qml</file>
+        <file>qml/ViewDelegateModule/img/favorite_checked.svg</file>
+        <file>qml/ViewDelegateModule/img/favorite_unchecked.svg</file>
     </qresource>
 </RCC>

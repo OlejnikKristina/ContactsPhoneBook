@@ -3,8 +3,9 @@
 #include <QString>
 #include "../includes/Contact.hpp"
 
-Contact::Contact(const QString &name, const QString &phone)
-: _phone(phone), _name(name)
+Contact::Contact(const QString &name,
+const QString &phone, const bool favorite)
+: _phone(phone), _name(name), _favorite(favorite)
 {}
 
 QString Contact::getName() const
@@ -15,4 +16,14 @@ QString Contact::getName() const
 QString	Contact::getPhone() const
 {
 	return (_phone);
+}
+
+bool	Contact::getFavorite() const
+{
+	return (_favorite);
+}
+
+void	Contact::setFavorite()
+{
+	_favorite = (_favorite) ? false : true;
 }

@@ -44,6 +44,5 @@ Rectangle {
 	  source: _contactDelegate
 	  color: Style.colorViolet
 	}
-
 }
 

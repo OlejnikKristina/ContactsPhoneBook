@@ -10,6 +10,7 @@ import StyleModule 1.0
 	color: Style.colorViolet
 
 /* ****   Header logo **** */
+
 	Rectangle {
 			anchors.verticalCenter: parent.verticalCenter
 			width: headerHeight + 40
@@ -24,11 +25,33 @@ import StyleModule 1.0
 	}
 
 /* ****   Main header title **** */
+
 	FontStyle {
+		anchors.bottom: parent.bottom
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-//		font.family: FontStyle.headerFont.name
 		text: "<h2>My phone contacts</h2>"
 	}
+
+/* ****   Favorites checkbox star button **** */
+
+	FavoriteButton {
+		id: _favoriteButton
+		anchors.right: parent.right
+		anchors.rightMargin: Style.xxlOffset * 2.7
+		anchors.verticalCenter: parent.verticalCenter
+
+		MouseArea {
+			anchors.fill: parent
+			z: 200
+			x: _favoriteButton.checxed ?
+			myContactModel.showFavorites() :
+			myContactModel.showAllContacts()
+		}
+	}
+
+/* ****   Grid/list view  button **** */
+
+	ViewButton {}
 }
 

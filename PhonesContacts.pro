@@ -24,7 +24,7 @@ RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH += $$PWD/qml
-QML2_IMPORT_PATH += $$PWD/qml
+QML2_IMPORT_PATH += $$PWD\\qml\\StyleModule
 QML3_IMPORT_PATH += $$PWD/qml/ViewDelegateModule
 QT_QUICK_CONTROLS_STYLE=universal ./app
 

@@ -10,12 +10,16 @@ class Contact
 private:
 	QString _phone;
 	QString _name;
+	bool _favorite;
 
 public:
 	Contact() = default;
-	Contact(const QString &name, const QString &phone);
+	Contact(const QString &name, const QString &phone,
+	const bool favorite = false);
 	QString getName() const;
 	QString getPhone() const;
+	bool	getFavorite() const;
+	void	setFavorite();
 };
 
 #endif

@@ -15,19 +15,27 @@ class ContactModel: public QAbstractListModel
 private:
 	enum Roles {
 		NameRole = 0x0100 + 1,
-		PhoneRole
+		PhoneRole,
+		Favorite
 	};
 
 	std::vector<Contact> _contacts;
 
 public:
+	bool isFavorite;
+
 	ContactModel();
 	QHash <int, QByteArray> roleNames() const override;
-	QVariant data(const QModelIndex &parent = {},  int role = Qt::DisplayRole) const override;
+	QVariant	data(const QModelIndex &parent = {},  int role = Qt::DisplayRole) const override;
 	int			rowCount(const QModelIndex &parent = {}) const override;
 	static void registerModel(const std::string &moduleName);
 	bool		addPhoneContacts();
 	std::vector<Contact> getPhoneContacts();
+	std::vector<Contact> getFavoritePhoneContacts();
+
+	Q_INVOKABLE bool showFavorites();
+	Q_INVOKABLE bool showAllContacts();
 };
+
 
 #endif
