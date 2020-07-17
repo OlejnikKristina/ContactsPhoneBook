@@ -1,19 +1,20 @@
 import QtQuick 2.0
 import StyleModule 1.0
+import PhoneContactsModel 1.0
 
  Rectangle {
 	property int headerHeight: 70
 
 	id: _header
 	height: headerHeight
-	z: 2
 	color: Style.colorViolet
 
 /* ****   Header logo **** */
 
 	Rectangle {
-			anchors.verticalCenter: parent.verticalCenter
-			width: headerHeight + 40
+		anchors.verticalCenter: parent.verticalCenter
+		width: headerHeight + 40
+
 		Image {
 			id: _contactImg
 			source: "img/icon_header.svg"
@@ -37,14 +38,22 @@ import StyleModule 1.0
 
 	FavoriteButton {
 		id: _favoriteButton
+		width: favoriteButtonWidth
+		height: favoriteButtoHeight
 		anchors.right: parent.right
-		anchors.rightMargin: Style.xxlOffset * 2.7
+		anchors.rightMargin: Style.xxlOffset * 1.8
 		anchors.verticalCenter: parent.verticalCenter
+	}
 
-		MouseArea {
-			anchors.fill: parent
-			z: 200
-			x: _favoriteButton.checxed ?
+	MouseArea {
+		id: _favoriteButtonArea
+		anchors.fill: _favoriteButton
+		onClicked: {
+			_favoriteButton.checxed ?
+			_favoriteButton.checxed = false :
+			_favoriteButton.checxed = true
+
+			_favoriteButton.checxed ?
 			myContactModel.showFavorites() :
 			myContactModel.showAllContacts()
 		}
@@ -52,6 +61,7 @@ import StyleModule 1.0
 
 /* ****   Grid/list view  button **** */
 
-	ViewButton {}
+//	ViewButton {
+//	}
 }
 

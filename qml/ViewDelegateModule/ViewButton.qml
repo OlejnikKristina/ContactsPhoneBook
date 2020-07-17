@@ -1,44 +1,32 @@
 import QtQuick 2.0
 import StyleModule 1.0
+import QtQuick.Controls 2.15
 
 Rectangle {
+	property int viewButtonWidth: Style.contactImgSize - 15
+	property int viewButtonHeight: Style.contactImgSize - 15
+	property alias isGridView: _viewCheckBox.checked
+
 	id: _imgBox
-	width: Style.contactImgSize - 15
-	height: Style.contactImgSize - 15
+	width: viewButtonWidth
+	height: viewButtonHeight
 	anchors.right: parent.right
 	anchors.rightMargin: Style.xlOffset + 2
 	anchors.verticalCenter: parent.verticalCenter
 
-	Image {
-		id: _viewImg
-//		source: _viewImgArea.hoverEnabled ?
-//		"img/list.png" : "img/grid.png"
-		source:"img/list.png"
-		width: Style.contactImgSize - 15
-		height: Style.contactImgSize - 15
-//		anchors.topMargin: Style.xxlOffset
-		anchors.verticalCenter: parent.verticalCenter
-//		MouseArea
-//		{
-//			hoverEnabled: true
-//			anchors.fill:parent
-//			onClicked: {
-//			parent.color="blue"
-//			source: "img/list.png"
-//			 console.log("clicked img");
-//			}
-//		}
+	CheckBox {
+		id: _viewCheckBox
+		anchors.fill: parent
+		opacity: 0
+		checked: true
 	}
 
-	MouseArea
-	{
-		id: _viewImgArea
-//		hoverEnabled: _viewImgArea.hoverEnabled ?
-//		false : true
-		anchors.fill:parent
-//		onClicked: {
-//			parent.color="blue"
-//			console.log("clicked");
-//		}
+	Image {
+		id: _viewImg
+		width: parent.width
+		height: parent.height
+		source: _viewCheckBox.checked ?
+		"img/list.png" : "img/grid.png"
+		anchors.verticalCenter: parent.verticalCenter
 	}
 }

@@ -8,11 +8,12 @@
 class Contact
 {
 private:
-	QString _phone;
-	QString _name;
-	bool _favorite;
+	QString		_phone;
+	QString		_name;
 
 public:
+	bool		_favorite;
+
 	Contact() = default;
 	Contact(const QString &name, const QString &phone,
 	const bool favorite = false);

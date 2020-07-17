@@ -3,14 +3,12 @@ import QtGraphicalEffects 1.0
 import StyleModule 1.0
 import QtQuick.Controls 2.15
 
+ItemDelegate{
+id: _gridDelegate
 Rectangle {
 	id: _contactDelegate
 	width: grid.cellWidth - 10
 	height: grid.cellHeight - 10
-
-//	width: Favorite ? grid.cellWidth - 10 : 0
-//	height: Favorite ? grid.cellHeight - 10 : 0
-//	visible: Favorite ? 1 : 0
 	color: _delegateArea.pressed ?
 	Style.colorAccent : Style.bgColor
 	anchors.leftMargin: Style.xxlOffset
@@ -41,22 +39,27 @@ Rectangle {
 /* ****   Favorites checkbox star button **** */
 
 	FavoriteButton {
-		id: jelmer
+		id: _favoriteStarButton
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: Style.xxlOffset
 		anchors.horizontalCenter: parent.horizontalCenter
-		z: 100
 		checxed: Favorite
-//		width: Favorite ? 35 : 10
-//		height: Favorite ? 35 : 10
-//		visible: Favorite ? 1 : 1
-
 	}
 
-//	visible: jelmer._favoriteButton ? false : true
-//	_favoriteButton.checxed: false
-//	_favoriteButton._favoriteButton : _favoriteButton.false
-//	_favoriteButton.checxed: Favorite
+	MouseArea {
+		id: _buttonActiveArea
+		anchors.fill: parent
+		z: 30
+		onClicked: {
+			_favoriteStarButton.checxed ?
+			_favoriteStarButton.checxed = false :
+			_favoriteStarButton.checxed = true
+
+			_favoriteStarButton.checxed ?
+			myContactModel.addToFavorite(index) :
+			myContactModel.removeFromFavorite(index)
+		}
+}
 
 	MouseArea {
 		id: _delegateArea
@@ -73,4 +76,5 @@ Rectangle {
 	  source: _contactDelegate
 	  color: Style.colorViolet
 	}
+}
 }

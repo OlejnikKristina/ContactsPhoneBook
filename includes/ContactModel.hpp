@@ -5,7 +5,6 @@
 #include "Contact.hpp"
 #include <QAbstractListModel>
 #include <QQmlEngine>
-#include <QDebug>
 #include <vector>
 
 class ContactModel: public QAbstractListModel
@@ -20,6 +19,7 @@ private:
 	};
 
 	std::vector<Contact> _contacts;
+	std::vector<Contact> _contactsAll;
 
 public:
 	bool isFavorite;
@@ -29,12 +29,14 @@ public:
 	QVariant	data(const QModelIndex &parent = {},  int role = Qt::DisplayRole) const override;
 	int			rowCount(const QModelIndex &parent = {}) const override;
 	static void registerModel(const std::string &moduleName);
-	bool		addPhoneContacts();
-	std::vector<Contact> getPhoneContacts();
-	std::vector<Contact> getFavoritePhoneContacts();
+	bool					addPhoneContacts();
+	std::vector<Contact>	getPhoneContacts();
+	std::vector<Contact>	getFavoritePhoneContacts();
 
 	Q_INVOKABLE bool showFavorites();
 	Q_INVOKABLE bool showAllContacts();
+	Q_INVOKABLE bool addToFavorite(int index);
+	Q_INVOKABLE bool removeFromFavorite(int index);
 };
 
 

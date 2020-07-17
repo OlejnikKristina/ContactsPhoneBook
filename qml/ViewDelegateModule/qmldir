@@ -1,4 +1,7 @@
 module ViewDelegateModule
 ListView 1.0 ListView.qml
+GridView 1.0 GridView.qml
 ListDelegate 1.0 ListDelegate.qml
 FontStyle 1.0 FontStyle.qml
+ViewButton 1.0 ViewButton.qml
+Header 1.0 Header.qml

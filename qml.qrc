@@ -21,5 +21,6 @@
         <file>qml/ViewDelegateModule/FavoriteButton.qml</file>
         <file>qml/ViewDelegateModule/img/favorite_checked.svg</file>
         <file>qml/ViewDelegateModule/img/favorite_unchecked.svg</file>
+        <file>qml/ViewDelegateModule/GridView.qml</file>
     </qresource>
 </RCC>

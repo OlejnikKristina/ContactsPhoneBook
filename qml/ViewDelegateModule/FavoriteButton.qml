@@ -28,4 +28,5 @@ Rectangle {
 		"img/favorite_checked.svg" : "img/favorite_unchecked.svg"
 		anchors.verticalCenter: _favoriteBox.verticalCenter
 	}
+
 }
