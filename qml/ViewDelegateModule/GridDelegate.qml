@@ -3,8 +3,6 @@ import QtGraphicalEffects 1.0
 import StyleModule 1.0
 import QtQuick.Controls 2.15
 
-ItemDelegate{
-id: _gridDelegate
 Rectangle {
 	id: _contactDelegate
 	width: grid.cellWidth - 10
@@ -43,6 +41,7 @@ Rectangle {
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: Style.xxlOffset
 		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.rightMargin: 40
 		checxed: Favorite
 	}
 
@@ -76,5 +75,4 @@ Rectangle {
 	  source: _contactDelegate
 	  color: Style.colorViolet
 	}
-}
 }
